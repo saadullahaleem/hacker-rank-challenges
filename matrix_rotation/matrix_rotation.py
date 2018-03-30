@@ -1,12 +1,12 @@
+import sys
+from collections import deque
+
 # Solved through the following approach:
 # # Get number of loops
 # # Reduce number of rotations by taking round_trip % number_of_rotations
 # # Rotate each loop by number_of_rotations
 
 # Passes all test cases. 
-
-import sys
-from collections import deque
 
 
 def matrixRotation(matrix):
