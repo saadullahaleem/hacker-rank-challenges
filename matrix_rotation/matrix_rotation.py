@@ -33,42 +33,31 @@ def matrixRotation(matrix):
         x0, y0 = m-i, n-j
         ld = deque([])
         
-        # print("for loop: rows= {}, cols={}, rt={}, sh={}, nl={}, nr={}".format(i, j, rt, sh, nl, nr))
-        # print("constraints",x0,y0,x1,y1)
-        
         for idx in range(x0, x1):
-            # print((x0+idx, y0), idx, matrix[idx][y0], 'x')
             ld.append(matrix[idx][y0])
             
         for idx in range(y0, y1):
-            # print((x1, y0+idx), idx, matrix[x1][idx], 'y')
             ld.append(matrix[x1][idx])
         
         for idx in range(x1, x0, -1):
-            # print((idx, y1), idx, matrix[idx][y1], 'z')
             ld.append(matrix[idx][y1])
         
         for idx in range(y1, y0, -1):
-            # print((x0, idx), idx, matrix[x0][idx], 'a')
             ld.append(matrix[x0][idx])
         
         ld.rotate(-sh)
         
         
         for idx in range(x0, x1):
-            # print((x0+idx, y0), idx, matrix[idx][y0], 'x')
             matrix[idx][y0] = ld.popleft()
             
         for idx in range(y0, y1):
-            # print((x1, y0+idx), idx, matrix[x1][idx], 'y')
             matrix[x1][idx] = ld.popleft()
         
         for idx in range(x1, x0, -1):
-            # print((idx, y1), idx, matrix[idx][y1], 'z')
             matrix[idx][y1] = ld.popleft()
         
         for idx in range(y1, y0, -1):
-            # print((x0, idx), idx, matrix[x0][idx], 'a')
             matrix[x0][idx] = ld.popleft()
             
         i, j = i-1, j-1
