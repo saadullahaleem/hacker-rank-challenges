@@ -1,6 +1,6 @@
 # Find clusters in the given graph using adjacency list and depth first search
 # Use the number of clusters to calculate the number of roads
-# calculate final cost using number of roads, cost of single road, number of cities, and cost of building a library
+# calculate final cost using no. of roads, cost of road, no. of cities, and cost of single library
 
 import sys
 from collections import deque
