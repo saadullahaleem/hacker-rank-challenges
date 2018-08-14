@@ -60,8 +60,7 @@ def height(root):
                 levels += 1
 
                 # Transfer contents of temp_queue into queue
-                while len(temp_queue):
-                    queue.appendleft(temp_queue.pop())
+                queue, temp_queue = temp_queue, queue
                 continue
 
             # Add child nodes to the temp_queue
