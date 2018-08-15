@@ -36,17 +36,6 @@ class BinarySearchTree:
                     break
 
 
-def find_node(root_node, info):
-    if root_node.info == info:
-        print(root_node, " has value ", info)
-        return root_node
-
-    if info < root_node.info:
-        return find_node(root_node.left, info)
-    else:
-        return find_node(root_node.right, info)
-
-
 def lca(root, v1, v2):
     target_node = None
 
