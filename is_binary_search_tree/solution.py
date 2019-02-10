@@ -6,6 +6,10 @@ class node:
         self.right = None
 """
 
+# This is a bad solution.
+# There is no need to traverse the complete Tree
+# Just check each traversed element with the last traversed.
+# If any of them is smaller than the last traversed one, it isn't a binary tree.
 
 def in_order_traversal(node, values):
     if node.left:
